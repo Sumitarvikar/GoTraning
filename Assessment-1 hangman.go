@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	//"go/printer"
 	"strings"
 )
 
@@ -27,7 +26,7 @@ func main() {
 			fmt.Println("Lost the game")
 			break
 		}
-
+		// evaluate a win!
 		if word == inputWord {
 			fmt.Println(placeholder)
 			fmt.Println("Win the game")
@@ -36,16 +35,16 @@ func main() {
 		// Console display
 		fmt.Printf("\n")
 		fmt.Println(placeholder)
-		fmt.Printf("\n")                  // render the placeholder
-		fmt.Printf("chances %d", chances) // render the chances left
+		fmt.Printf("\n")                     // render the placeholder
+		fmt.Printf("chances :  %d", chances) // render the chances left
 		fmt.Printf("\n")
-		//	fmt.Printf() // show the letters or words guessed till now.
-		fmt.Println("Guess a letter  ")
+		fmt.Printf("Guess a letter :")
 
 		for i := range entries {
 			fmt.Printf("%s", i)
 		}
-		fmt.Println("enter char")
+		fmt.Printf("\n")
+		fmt.Println("enter char :")
 		str := ""
 		_, err := fmt.Scanln(&str)
 
