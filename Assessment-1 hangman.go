@@ -55,18 +55,6 @@ func main() {
 		}
 
 		// compare and update entries, placeholder and chances.
-		for i := range word {
-			c := string(word[i])
-			if str == c && placeholder[i] != c {
-				entries[c] = true
-				placeholder[i] = c
-			}
-		}
-
-		if ok := entries[str]; !ok {
-			entries[str] = true
-			chances--
-		}
 
 	}
 }
