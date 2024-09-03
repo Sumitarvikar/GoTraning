@@ -6,7 +6,7 @@ import (
 
 func printSlice(index1 int, index2 int) {
 	wordArray := [8]string{"qwe", "wer", "ert", "rty", "tyu", "yui", "uio", "iop"}
-	if index1 < 0 || index2 < 0 || index1 >= len(wordArray) || index2 >= len(wordArray) || index1 > index2 {
+	if index1 < 0 || index2 >= len(wordArray) || index1 > index2 {
 		fmt.Println("Incorrect Indexes")
 		return
 	}
